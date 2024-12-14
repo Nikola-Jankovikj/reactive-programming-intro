@@ -162,7 +162,7 @@ This ensures errors don’t crash the application and provides proper handling w
 
 Reactive programming shines in scenarios that require real-time data processing and responsiveness. Below are examples demonstrating where and how you might use reactive streams effectively. Each example showcases practical implementations and highlights the strengths of reactive programming.
 
-### Real-time stock price updates
+### Real-Time Stock Price Updates
 
 ```kotlin
 // Define a data class to represent stock updates
@@ -285,7 +285,7 @@ Blocking execution time: 1586 ms
 ```
 In this example, the code simulates making 10 blocking API calls using a simple loop. Each call to `getSensorDataFromApiBlocking()` introduces a delay using `Thread.sleep()`, which simulates a network call that blocks the current thread. This ensures that each API call completes sequentially, and the program waits for the response before moving to the next one. The total execution time is measured by capturing the start and end times, demonstrating the inefficiency of blocking operations when multiple asynchronous calls are involved.
 
-#### Performance overview
+#### Performance Overview
 
 The blocking sensor operation took **1586 ms** because each API call is sequential and blocks the thread, causing delays to accumulate. In contrast, the reactive approach only took **306 ms**, as it allows concurrent execution of API calls, utilizing non-blocking operations to handle multiple requests efficiently.
 
