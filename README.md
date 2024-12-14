@@ -289,7 +289,7 @@ In this example, the code simulates making 10 blocking API calls using a simple 
 
 The blocking sensor operation took **1586 ms** because each API call is sequential and blocks the thread, causing delays to accumulate. In contrast, the reactive approach only took **306 ms**, as it allows concurrent execution of API calls, utilizing non-blocking operations to handle multiple requests efficiently.
 
-### When not to use Reactive programming
+### When Not To Use Reactive Programming
 ```kotlin
 data class User(val id: Int, val name: String, val email: String)  
   
