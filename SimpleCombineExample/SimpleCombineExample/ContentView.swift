@@ -23,6 +23,7 @@ class ViewModel: ObservableObject {
     func addTextFieldSubscriber() {
         $textFieldText
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .removeDuplicates()
             .map { text -> Bool in
                 return text.count > 3
             }
